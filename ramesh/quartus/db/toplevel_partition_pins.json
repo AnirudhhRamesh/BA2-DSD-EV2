@@ -1,0 +1,189 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "L1_0",
+					"strict" : false
+				},
+				{
+					"name" : "L2_0",
+					"strict" : false
+				},
+				{
+					"name" : "L3_0",
+					"strict" : false
+				},
+				{
+					"name" : "L4_0",
+					"strict" : false
+				},
+				{
+					"name" : "L5_0",
+					"strict" : false
+				},
+				{
+					"name" : "L6_0",
+					"strict" : false
+				},
+				{
+					"name" : "die1_DecimalPoint",
+					"strict" : false
+				},
+				{
+					"name" : "die1_Segment_A",
+					"strict" : false
+				},
+				{
+					"name" : "die1_Segment_B",
+					"strict" : false
+				},
+				{
+					"name" : "die1_Segment_C",
+					"strict" : false
+				},
+				{
+					"name" : "die1_Segment_D",
+					"strict" : false
+				},
+				{
+					"name" : "die1_Segment_E",
+					"strict" : false
+				},
+				{
+					"name" : "die1_Segment_F",
+					"strict" : false
+				},
+				{
+					"name" : "die1_Segment_G",
+					"strict" : false
+				},
+				{
+					"name" : "die2_DecimalPoint",
+					"strict" : false
+				},
+				{
+					"name" : "die2_Segment_A",
+					"strict" : false
+				},
+				{
+					"name" : "die2_Segment_B",
+					"strict" : false
+				},
+				{
+					"name" : "die2_Segment_C",
+					"strict" : false
+				},
+				{
+					"name" : "die2_Segment_D",
+					"strict" : false
+				},
+				{
+					"name" : "die2_Segment_E",
+					"strict" : false
+				},
+				{
+					"name" : "die2_Segment_F",
+					"strict" : false
+				},
+				{
+					"name" : "die2_Segment_G",
+					"strict" : false
+				},
+				{
+					"name" : "die3_DecimalPoint",
+					"strict" : false
+				},
+				{
+					"name" : "die3_Segment_A",
+					"strict" : false
+				},
+				{
+					"name" : "die3_Segment_B",
+					"strict" : false
+				},
+				{
+					"name" : "die3_Segment_C",
+					"strict" : false
+				},
+				{
+					"name" : "die3_Segment_D",
+					"strict" : false
+				},
+				{
+					"name" : "die3_Segment_E",
+					"strict" : false
+				},
+				{
+					"name" : "die3_Segment_F",
+					"strict" : false
+				},
+				{
+					"name" : "die3_Segment_G",
+					"strict" : false
+				},
+				{
+					"name" : "die4_DecimalPoint",
+					"strict" : false
+				},
+				{
+					"name" : "die4_Segment_A",
+					"strict" : false
+				},
+				{
+					"name" : "die4_Segment_B",
+					"strict" : false
+				},
+				{
+					"name" : "die4_Segment_C",
+					"strict" : false
+				},
+				{
+					"name" : "die4_Segment_D",
+					"strict" : false
+				},
+				{
+					"name" : "die4_Segment_E",
+					"strict" : false
+				},
+				{
+					"name" : "die4_Segment_F",
+					"strict" : false
+				},
+				{
+					"name" : "die4_Segment_G",
+					"strict" : false
+				},
+				{
+					"name" : "Clock_0",
+					"strict" : false
+				},
+				{
+					"name" : "n_Reset_0",
+					"strict" : false
+				},
+				{
+					"name" : "n_Block_die_1_0",
+					"strict" : false
+				},
+				{
+					"name" : "n_Block_die_2_0",
+					"strict" : false
+				},
+				{
+					"name" : "n_Block_die_3_0",
+					"strict" : false
+				},
+				{
+					"name" : "n_Block_die_4_0",
+					"strict" : false
+				},
+				{
+					"name" : "n_Mode_0",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,121 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 17:38:11  June 04, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		toplevel_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE15F23C6
+set_global_assignment -name TOP_LEVEL_ENTITY toplevel
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:38:11  JUNE 04, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name VHDL_FILE ../vhdl/toplevel_entity.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/toplevel_behavior.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/Sort_entity.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/Sort_behavior.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/ShiftToParallel_entity.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/ShiftToParallel_behavior.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/requestRandom_entity.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/requestRandom_behavior.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/randomNumber_entity.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/randomNumber_behavior.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/genericcounter_entity.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/genericcounter_behavior.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/gamecontrol_entity.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/gamecontrol_behavior.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/DiceImplementation_entity.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/DiceImplementation_behavior.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/DiceControl_entity.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/DiceControl_behavior.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/Decoder_entity.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/Decoder_behavior.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/ButtonLogic_entity.vhdl
+set_global_assignment -name VHDL_FILE ../vhdl/ButtonLogic_behavior.vhdl
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name TCL_SCRIPT_FILE ../tcl/pins.tcl
+set_location_assignment PIN_AA11 -to n_Reset_0
+set_location_assignment PIN_U9 -to die2_Segment_A
+set_location_assignment PIN_W8 -to die2_Segment_B
+set_location_assignment PIN_V8 -to die2_Segment_C
+set_location_assignment PIN_Y4 -to die2_Segment_D
+set_location_assignment PIN_T11 -to die2_Segment_E
+set_location_assignment PIN_R11 -to die2_Segment_F
+set_location_assignment PIN_T10 -to die2_Segment_G
+set_location_assignment PIN_W7 -to die2_DecimalPoint
+set_location_assignment PIN_B11 -to n_Block_die_4_0
+set_location_assignment PIN_U11 -to die1_Segment_A
+set_location_assignment PIN_G18 -to die1_Segment_B
+set_location_assignment PIN_M8 -to die1_Segment_C
+set_location_assignment PIN_L6 -to die1_Segment_D
+set_location_assignment PIN_W10 -to die1_Segment_E
+set_location_assignment PIN_U10 -to die1_Segment_F
+set_location_assignment PIN_V9 -to die1_Segment_G
+set_location_assignment PIN_L7 -to die1_DecimalPoint
+set_location_assignment PIN_T3 -to die4_Segment_A
+set_location_assignment PIN_R6 -to die4_Segment_B
+set_location_assignment PIN_R5 -to die4_Segment_C
+set_location_assignment PIN_P7 -to die4_Segment_D
+set_location_assignment PIN_N8 -to die4_Segment_E
+set_location_assignment PIN_N7 -to die4_Segment_F
+set_location_assignment PIN_P8 -to die4_Segment_G
+set_location_assignment PIN_P6 -to die4_DecimalPoint
+set_location_assignment PIN_B12 -to n_Block_die_2_0
+set_location_assignment PIN_R10 -to die3_Segment_A
+set_location_assignment PIN_T9 -to die3_Segment_B
+set_location_assignment PIN_R9 -to die3_Segment_C
+set_location_assignment PIN_R8 -to die3_Segment_D
+set_location_assignment PIN_T7 -to die3_Segment_E
+set_location_assignment PIN_R7 -to die3_Segment_F
+set_location_assignment PIN_T4 -to die3_Segment_G
+set_location_assignment PIN_T8 -to die3_DecimalPoint
+set_location_assignment PIN_A11 -to n_Block_die_3_0
+set_location_assignment PIN_A12 -to n_Block_die_1_0
+set_location_assignment PIN_G22 -to n_Mode_0
+set_location_assignment PIN_T22 -to Clock_0
+set_location_assignment PIN_B4 -to L1_0
+set_location_assignment PIN_B8 -to L2_0
+set_location_assignment PIN_B14 -to L3_0
+set_location_assignment PIN_B18 -to L4_0
+set_location_assignment PIN_C22 -to L5_0
+set_location_assignment PIN_H22 -to L6_0
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

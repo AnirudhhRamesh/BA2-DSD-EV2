@@ -1,0 +1,56 @@
+architecture behavior of ButtonLogic is
+
+    Signal s_DFF1_in, s_DFF1_out : std_logic;
+    signal s_DFF2_out : std_logic;
+    signal s_DFF3_out : std_logic;
+    signal s_DFF4_out : std_logic;
+    signal s_DFF5_out : std_logic;
+    signal s_output1, s_output_2, s_output_3, s_output_4 : std_logic;
+
+begin
+
+    --8 implicit processes max (one for each gate)?
+    s_DFF1_in <= not( Reset or Tick or not(s_DFF1_out));
+    s_output1 <= s_DFF3_out and not(s_DFF4_out);
+    s_output_2 <= s_output1 xor s_DFF5_out;
+    s_output_3 <= UnBlock nor Reset;
+    s_output_4 <= s_output_2 and s_output_3;
+    blk <= s_DFF5_out;
+
+    --5 explicit processes (one for each D-FF)
+    DFF1 : process( Clock, Button )
+    begin
+        if( Button = '1' ) then s_DFF1_out <= '1';
+        elsif( rising_edge(Clock) ) then s_DFF1_out <= s_DFF1_in;
+      end if;
+    end process ; -- DFF1
+    
+    DFF2 : process( Clock )
+    begin
+        if( rising_edge(Clock) ) then
+            s_DFF2_out <= not(Reset or not(s_DFF1_out));
+        end if ;
+    end process ; -- DFF2
+
+    DFF3 : process( Clock )
+    begin
+        if( rising_edge(Clock) ) then
+            s_DFF3_out <= not(Reset or not(s_DFF2_out));
+        end if ;
+    end process ; -- DFF3
+
+    DFF4 : process( Clock )
+    begin
+        if( rising_edge(Clock) ) then
+            s_DFF4_out <= not(Reset or not(s_DFF3_out));
+        end if ;
+    end process ; -- DFF4
+
+    DFF5 : process( Clock )
+    begin
+        if( rising_edge(Clock) ) then
+            s_DFF5_out <= s_output_4;
+        end if ;
+    end process ; -- DFF5
+
+end architecture behaviour;

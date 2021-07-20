@@ -1,0 +1,59 @@
+architecture behavior of DiceControl is
+
+    TYPE ControlStateType is (waitIdle, waitTick, waitRand);
+    SIGNAL s_cur_state : ControlStateType;
+
+    SIGNAL s_wait_for_tick, s_wait_for_random : std_logic;
+    SIGNAL s_next_DiceValue : unsigned(2 downto 0);
+
+begin
+
+    --explicit processes (one for each D-FF)
+    controller : process( Clock, Reset, RollDiceIn, Tick, Done, s_wait_for_tick, s_wait_for_random, ShiftValue)
+    begin
+        if( rising_edge(Clock) ) then
+            DiceValue <= s_next_DiceValue;
+
+            if (Reset = '1') then --set to initial state
+                s_cur_state <= waitIdle;
+                DiceValue <= to_unsigned(0,3);
+                s_next_DiceValue <= to_unsigned(0,3);
+                ValidDice <= '0';
+                RollDiceOut <= '0';
+            else
+                --if idle
+                if (s_cur_state = waitIdle) then
+                    if (RollDiceIn = '1') then
+                        s_wait_for_tick <= '1';
+                    end if;
+                end if;
+
+                --if waiting for tick
+                if (s_cur_state <= waitTick) then
+                    if (Tick = '1') then 
+                        RollDiceOut <= '1'; --For one clock cycle
+                        s_cur_state <= waitRand;
+                    else
+                        RollDiceOut <= '0';
+                    end if;
+                end if;
+
+                --if waiting for random nbr
+                if (s_cur_state = waitRand) then
+                    if (Done = '1') then
+                        if ((ShiftValue(3) = '1') or ((ShiftValue(2 downto 0)) < std_logic_vector(to_unsigned(1,3))) or (ShiftValue(2 downto 0) > std_logic_vector(to_unsigned(6,3)))) then
+                            s_next_DiceValue <= to_unsigned(0,3);
+                            s_cur_state <= waitTick;
+                        else
+                            s_next_DiceValue <= unsigned(ShiftValue(2 downto 0));
+                            ValidDice <= '1';
+                            s_cur_state <= waitIdle;
+                        end if;
+                    else
+                        ValidDice <= '0';
+                    end if;
+                end if;
+            end if;
+        end if ;
+    end process ; -- controller
+end architecture behavior;
